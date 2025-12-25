@@ -4,7 +4,7 @@ import streamlit as st
 # CONFIG
 # =============================
 st.set_page_config(
-    page_title="Interactive Tableau Dashboard",
+    page_title="DASHBOARD REKRUITMEN STAFF BPH 2026",
     page_icon="📊",
     layout="wide"
 )
@@ -71,7 +71,7 @@ st.sidebar.title("📊 Navigasi Dashboard")
 
 menu = st.sidebar.radio(
     "Pilih Tampilan:",
-    ["🏠 Beranda", "📌 Dashboard 1", "📈 Dashboard 2"]
+    ["🏠 Beranda", "📈 Pilihan 1", "📈 Pilihan 2"]
 )
 
 st.sidebar.markdown("---")
@@ -97,8 +97,7 @@ if menu == "🏠 Beranda":
         <div class='card'>
             <h3>🎯 Tujuan</h3>
             <p>
-            Website ini bertujuan menyajikan hasil analisis data dalam bentuk dashboard interaktif
-            agar pengguna dapat melakukan eksplorasi data secara mandiri.
+            Website ini bertujuan menyajikan hasil analisis data persebaran pendaftaran Calon Staff BPH HMSD ADYATAMA 2026.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -120,13 +119,12 @@ if menu == "🏠 Beranda":
 # DASHBOARD 1
 # =============================
 elif menu == "📌 Dashboard 1":
-    st.markdown("<div class='section-title'>📌 Dashboard 1 – Pilihan Departemen & Divisi</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-title'>📈 Dashboard 1 – Pilihan 1: Departemen & Divisi</div>", unsafe_allow_html=True)
 
     st.markdown("""
     <div class='card'>
         <p>
-        Dashboard ini menampilkan distribusi pilihan departemen dan divisi berdasarkan preferensi responden.
-        Urutan visualisasi disusun dari jumlah terbanyak hingga paling sedikit.
+        Pilihan 1 Calon Staff terhadap Departemen dan Divisi HMSD ADYATAMA 2026.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -147,13 +145,12 @@ elif menu == "📌 Dashboard 1":
 # DASHBOARD 2
 # =============================
 elif menu == "📈 Dashboard 2":
-    st.markdown("<div class='section-title'>📈 Dashboard 2 – Analisis Lanjutan</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-title'>📈 Dashboard 2 – Pilihan 2: Departemen & Divisi</div>", unsafe_allow_html=True)
 
     st.markdown("""
     <div class='card'>
         <p>
-        Dashboard ini menyajikan analisis lanjutan untuk mendukung pengambilan keputusan
-        dengan pendekatan visual yang lebih eksploratif.
+        Pilihan 2 Calon Staff terhadap Departemen dan Divisi HMSD ADYATAMA 2026.
         </p>
     </div>
     """, unsafe_allow_html=True)
