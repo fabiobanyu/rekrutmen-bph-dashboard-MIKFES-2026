@@ -134,13 +134,14 @@ elif menu == "📌 Dashboard 1":
     st.markdown("""
     <div class="tableau-wrapper">
         <iframe 
-            src="https://public.tableau.com/views/Dashboard1_17666440637870/Dashboard2?:showVizHome=no"
+            src="https://public.tableau.com/views/Dashboard1_17666440637870/Dashboard1?:showVizHome=no"
             width="100%"
             height="900"
             frameborder="0">
         </iframe>
     </div>
     """, unsafe_allow_html=True)
+
 
 # =============================
 # DASHBOARD 2
@@ -159,11 +160,11 @@ elif menu == "📈 Dashboard 2":
 
     st.markdown("""
     <div class="tableau-wrapper">
-        <iframe 
-            src="https://public.tableau.com/views/Dashboard2_17666439989780/Dashboard2?:showVizHome=no"
-            width="100%"
-            height="900"
-            frameborder="0">
-        </iframe>
-    </div>
-    """, unsafe_allow_html=True)
+    <iframe 
+        src="https://public.tableau.com/views/Dashboard2_17666439989780/Dashboard2?:showVizHome=no"
+        width="100%"
+        height="900"
+        frameborder="0">
+    </iframe>
+</div>
+""", unsafe_allow_html=True)
