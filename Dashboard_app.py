@@ -10,35 +10,57 @@ st.set_page_config(
 )
 
 # =============================
-# CUSTOM CSS
+# CUSTOM CSS (STABIL & AMAN)
 # =============================
 st.markdown("""
 <style>
-    .main-title {
-        font-size: 42px;
-        font-weight: 800;
-        color: #1f2937;
-    }
-    .sub-title {
-        font-size: 18px;
-        color: #6b7280;
-        margin-bottom: 30px;
-    }
-    .section-title {
-        font-size: 28px;
-        font-weight: 700;
-        margin-top: 20px;
-    }
-    .card {
-        background-color: #ffffff;
-        padding: 25px;
-        border-radius: 16px;
-        box-shadow: 0px 8px 25px rgba(0,0,0,0.06);
-        margin-bottom: 30px;
-    }
-    iframe {
-        border-radius: 14px;
-    }
+/* Global */
+.block-container {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* Title */
+.main-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f9fafb;
+}
+.sub-title {
+    font-size: 17px;
+    color: #d1d5db;
+    margin-bottom: 40px;
+}
+
+/* Section */
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f9fafb;
+}
+
+/* Card */
+.card {
+    background-color: #111827;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+    margin-bottom: 30px;
+}
+
+/* Tableau wrapper */
+.tableau-wrapper {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #020617;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -46,6 +68,7 @@ st.markdown("""
 # SIDEBAR
 # =============================
 st.sidebar.title("📊 Navigasi Dashboard")
+
 menu = st.sidebar.radio(
     "Pilih Tampilan:",
     ["🏠 Beranda", "📌 Dashboard 1", "📈 Dashboard 2"]
@@ -62,17 +85,20 @@ st.sidebar.markdown("- Python")
 # =============================
 if menu == "🏠 Beranda":
     st.markdown("<div class='main-title'>Dashboard Interaktif Tableau</div>", unsafe_allow_html=True)
-    st.markdown("<div class='sub-title'>Visualisasi data interaktif berbasis Tableau Public yang diintegrasikan ke dalam website menggunakan Streamlit.</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='sub-title'>Visualisasi data interaktif berbasis Tableau Public yang diintegrasikan menggunakan Streamlit.</div>",
+        unsafe_allow_html=True
+    )
 
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2, gap="large")
 
     with col1:
         st.markdown("""
         <div class='card'>
             <h3>🎯 Tujuan</h3>
             <p>
-            Website ini bertujuan untuk menyajikan hasil analisis data dalam bentuk dashboard interaktif,
-            sehingga pengguna dapat melakukan eksplorasi data secara mandiri.
+            Website ini bertujuan menyajikan hasil analisis data dalam bentuk dashboard interaktif
+            agar pengguna dapat melakukan eksplorasi data secara mandiri.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -100,19 +126,21 @@ elif menu == "📌 Dashboard 1":
     <div class='card'>
         <p>
         Dashboard ini menampilkan distribusi pilihan departemen dan divisi berdasarkan preferensi responden.
-        Visualisasi disusun dari yang paling banyak hingga paling sedikit dipilih.
+        Urutan visualisasi disusun dari jumlah terbanyak hingga paling sedikit.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    dashboard1 = """
-    <iframe src="https://public.tableau.com/views/Dashboard1_17666440637870/Dashboard2?:showVizHome=no"
+    st.markdown("""
+    <div class="tableau-wrapper">
+        <iframe 
+            src="https://public.tableau.com/views/Dashboard1_17666440637870/Dashboard2?:showVizHome=no"
             width="100%"
-            height="850">
-    </iframe>
-    """
-
-    st.components.v1.html(dashboard1, height=900)
+            height="900"
+            frameborder="0">
+        </iframe>
+    </div>
+    """, unsafe_allow_html=True)
 
 # =============================
 # DASHBOARD 2
@@ -123,17 +151,19 @@ elif menu == "📈 Dashboard 2":
     st.markdown("""
     <div class='card'>
         <p>
-        Dashboard ini menyajikan analisis tambahan yang mendukung pengambilan keputusan
+        Dashboard ini menyajikan analisis lanjutan untuk mendukung pengambilan keputusan
         dengan pendekatan visual yang lebih eksploratif.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    dashboard2 = """
-    <iframe src="https://public.tableau.com/views/Dashboard2_17666439989780/Dashboard2?:showVizHome=no"
+    st.markdown("""
+    <div class="tableau-wrapper">
+        <iframe 
+            src="https://public.tableau.com/views/Dashboard2_17666439989780/Dashboard2?:showVizHome=no"
             width="100%"
-            height="850">
-    </iframe>
-    """
-
-    st.components.v1.html(dashboard2, height=900)
+            height="900"
+            frameborder="0">
+        </iframe>
+    </div>
+    """, unsafe_allow_html=True)
