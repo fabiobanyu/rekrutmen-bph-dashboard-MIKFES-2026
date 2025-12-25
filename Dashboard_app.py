@@ -118,7 +118,7 @@ if menu == "🏠 Beranda":
 # =============================
 # DASHBOARD 1
 # =============================
-elif menu == "📌 Dashboard 1":
+elif menu == "📈 Pilihan 1":
     st.markdown("<div class='section-title'>📈 Dashboard 1 – Pilihan 1: Departemen & Divisi</div>", unsafe_allow_html=True)
 
     st.markdown("""
@@ -144,7 +144,7 @@ elif menu == "📌 Dashboard 1":
 # =============================
 # DASHBOARD 2
 # =============================
-elif menu == "📈 Dashboard 2":
+elif menu == "📈 Pilihan 2":
     st.markdown("<div class='section-title'>📈 Dashboard 2 – Pilihan 2: Departemen & Divisi</div>", unsafe_allow_html=True)
 
     st.markdown("""
